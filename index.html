@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -64,32 +64,31 @@
 
         .main-column {
             width: 60%;
-			align-items:center;
         }
 
-        .recipe {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+.recipe {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Zmiana na flex-start dla wyrównania z lewej strony */
+    margin-bottom: 20px;
+}
 
-        .recipe img {
-            max-width: 200px;
-            height: auto;
-            border-radius: 5px;
-            margin-right: 20px;
-        }
+.recipe img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+}
 
-        .recipe-details {
-            flex: 1;
-        }
-		
-		.recipe-details h3 {
+.recipe-details {
+    flex: 1;
+}
+
+.recipe-details h3 {
     font-size: 1.5em; /* Zwiększenie rozmiaru czcionki dla tytułu przepisu */
 }
 
@@ -97,7 +96,6 @@
     font-size: 0.8em; /* Zmniejszenie rozmiaru czcionki dla daty publikacji */
     color: #808080; /* Zmiana koloru na szary */
 }
-
         .sidebar {
             width: 35%;
             background-color: #f2f2f2;
@@ -187,6 +185,7 @@
 </head>
 
 <body>
+<noscript>Twoja przeglądarka nie obsługuje JavaScript. Włącz go, aby korzystać z pełnej funkcjonalności strony.</noscript>
 
     <header>
 	 <a href="index.html">
@@ -196,10 +195,25 @@
 
     <main>
         <div class="main-column">
-		<div class="recipe"><center>
-		<h1><center>Aktualnie przeglądana kategoria: Sałatki</h1>	
-		</div>
             <!-- Przepisy -->
+            <div class="recipe">
+                <img src="pieczone-pomidory.jpg" alt="Przepis 3">
+                <div class="recipe-details">
+                    <h3>Zupa krem z pieczonych pomidorów i papryki</h3>
+                    <p>Zupa krem z pieczonych pomidorów i papryki oczaruje Was swoją prostotą. Tak naprawdę do zupy nie potrzebujemy przypraw, aby zachwycić się jej smakiem, a właściwie smakiem pieczonych warzyw.</p>
+                    <p>Data publikacji: 02-01-2024</p>
+                </div>
+            </div>
+
+            <div class="recipe">
+                <img src="Sniadania2.jpg" alt="Przepis 3">
+                <div class="recipe-details">
+                    <h3>Placuszki z banana i płatków owsianych</h3>
+                    <p>Placuszki z banana i płatków owsianych to placuszki, które zrobione są wyłącznie z trzech bazowych składników! Przygotowuje się je za pomocą blendera, aby miały gładką i puszystą konsystencje</p>
+                    <p>Data publikacji: 05-01-2024</p>
+                </div>
+            </div>
+			
             <div class="recipe">
                 <img src="Salatka1.jpg" alt="Przepis 2">
                 <div class="recipe-details">
@@ -208,25 +222,15 @@
                     <p>Data publikacji: 07-01-2024</p>
                 </div>
             </div>
-
-            <div class="recipe">
-                <img src="Salatka2.jpg" alt="Przepis 3">
-                <div class="recipe-details">
-                    <h3>Sałatka z jajkiem i boczkiem</h3>
-                    <p>Sałatka z jajkiem i boczkiem to propozycja sałatki na obiad lub kolację. Smaczna, kolorowa, sycąca! </p>
-                    <p>Data publikacji: 08-01-2024</p>
-                </div>
-            </div>
 			
-			            <div class="recipe">
-                <img src="Salatka3.jpg" alt="Przepis 2">
+            <div class="recipe">
+                <img src="Deser1.jpg" alt="Przepis 2">
                 <div class="recipe-details">
-                    <h3>Sałatka z zupek chińskich z kurczakiem</h3>
-                    <p>Sałatka z zupek chińskich z kurczakiem, papryką i kukurydzą to świetny pomysł na sycącą sałatkę na imprezę. </p>
-					<p>Data publikacji: 09-01-2024</p>
+                    <h3>Deser kawowy z owocami</h3>
+                    <p>Deser kawowy z owocami to moja propozycja ekspresowego deseru na ciepłe, letnie dni. Połączenie smaku kawy, herbatników i owoców idealnie ze sobą współgra.</p>
+                    <p>Data publikacji: 10-01-2024</p>
                 </div>
             </div>
-
 
         </div>
 
@@ -242,11 +246,12 @@
             <img src="x-twitter.svg" alt="X" onclick="window.location.href='https://twitter.com/elonmusk?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'">
             <img src="youtube.svg" alt="Youtube" onclick="window.location.href='https://www.youtube.com/'">
 			<br><br>
+		<nav>
 			<img src="Zupy.png" alt="Link 1" onclick="window.location.href='Zupy.html'">
             <img src="Sniadania.png" alt="Link 2" onclick="window.location.href='Sniadania.html'">
             <img src="Salatki.png" alt="Link 3" onclick="window.location.href='Salatki.html'">
             <img src="Desery.png" alt="Link 4" onclick="window.location.href='Desery.html'">
-    
+        </nav>
  <button id="back-to-top" onclick="scrollToTop()">Powrót do góry</button>			
             <br><br><br><a href="kontakt.html">Formularz kontaktowy</a>
         </div>
@@ -280,6 +285,7 @@
                 btn.style.display = "none";
             }
         };
+		
     </script>
 </body>
 
