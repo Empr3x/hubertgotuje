@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: url('Tlo.jpg') center/cover no-repeat fixed;
+        }
+
+        header {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 20px;
+            width: 100%;
+            z-index: 1000;
+            position: fixed;
+            top: 0;
+        }
+
+        .main-logo {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            margin-top: -40px;
+            margin-bottom: -40px;
+        }
+
+        main {
+            text-align: center;
+            margin: 120px auto 20px auto;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            flex: 1;
+        }
+
+        footer {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .main-column {
+            width: 60%;
+        }
+
+.recipe {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Zmiana na flex-start dla wyrównania z lewej strony */
+    margin-bottom: 20px;
+}
+
+.recipe img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.recipe-details {
+    flex: 1;
+}
+
+.recipe-details h3 {
+    font-size: 1.5em; /* Zwiększenie rozmiaru czcionki dla tytułu przepisu */
+}
+
+.recipe-details p:last-child {
+    font-size: 0.8em; /* Zmniejszenie rozmiaru czcionki dla daty publikacji */
+    color: #808080; /* Zmiana koloru na szary */
+}
+        .sidebar {
+            width: 35%;
+            background-color: #f2f2f2;
+            padding: 50px;
+            border-radius: 10px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+        }
+
+        .social-icons-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .social-icons-footer img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        nav ul ul li {
+            width: 200px;
+            text-align: left;
+        }
+
+        nav ul ul a {
+            padding: 10px;
+            display: block;
+        }
+		
+		#back-to-top {
+            position: fixed;
+            bottom: 10%;
+            right: 50%;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            display: none;
+		}
+
+        @media screen and (max-width: 767px) {
+            .main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            nav ul ul {
+                top: 20px;
+                left: 0;
+            }
+
+            .main-column,
+            .sidebar {
+                width: 100%;
+                margin-right: 0;
+            }
+
+            .social-icons-footer {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .social-icons-footer img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+    <title>Blog Kulinarny</title>
+</head>
+
+<body>
+<noscript>Twoja przeglądarka nie obsługuje JavaScript. Włącz go, aby korzystać z pełnej funkcjonalności strony.</noscript>
+
+    <header>
+	 <a href="Glowna.html">
+        <img src="logo3.png" alt="Main Logo" class="main-logo">
+		 </a>
+    </header>
+
+    <main>
+        <div class="main-column">
+            <!-- Przepisy -->
+            <div class="recipe">
+                <img src="pieczone-pomidory.jpg" alt="Przepis 3">
+                <div class="recipe-details">
+                    <h3>Zupa krem z pieczonych pomidorów i papryki</h3>
+                    <p>Zupa krem z pieczonych pomidorów i papryki oczaruje Was swoją prostotą. Tak naprawdę do zupy nie potrzebujemy przypraw, aby zachwycić się jej smakiem, a właściwie smakiem pieczonych warzyw.</p>
+                    <p>Data publikacji: 02-01-2024</p>
+                </div>
+            </div>
+
+            <div class="recipe">
+                <img src="Sniadania2.jpg" alt="Przepis 3">
+                <div class="recipe-details">
+                    <h3>Placuszki z banana i płatków owsianych</h3>
+                    <p>Placuszki z banana i płatków owsianych to placuszki, które zrobione są wyłącznie z trzech bazowych składników! Przygotowuje się je za pomocą blendera, aby miały gładką i puszystą konsystencje</p>
+                    <p>Data publikacji: 05-01-2024</p>
+                </div>
+            </div>
+			
+            <div class="recipe">
+                <img src="Salatka1.jpg" alt="Przepis 2">
+                <div class="recipe-details">
+                    <h3>Sałatka ze szparagami i fetą</h3>
+                    <p>Sałatka ze szparagami i serem feta to doskonały pomysł na lekki obiad czy kolację. Idealna również, jako dodatek do mięs w sezonie grillowym.</p>
+                    <p>Data publikacji: 07-01-2024</p>
+                </div>
+            </div>
+			
+            <div class="recipe">
+                <img src="Deser1.jpg" alt="Przepis 2">
+                <div class="recipe-details">
+                    <h3>Deser kawowy z owocami</h3>
+                    <p>Deser kawowy z owocami to moja propozycja ekspresowego deseru na ciepłe, letnie dni. Połączenie smaku kawy, herbatników i owoców idealnie ze sobą współgra.</p>
+                    <p>Data publikacji: 10-01-2024</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Prawa kolumna (Poboczna) -->
+        <div class="sidebar">
+            <img src="logo2.png" alt="Secondary Logo" class="main-logo">
+            <h2><br>O mnie</h2>
+            <p>Cześć! Mam na imię Hubert. Witaj na moim blogu, który prowadzę dla Ciebie już od ponad miesiąca, Znajdziesz tu proste i smaczne przepisy na śniadania oraz zupy które uwielbiam 🙂</p>
+            <br>
+            <h2>Moje Social Media</h2>
+            <img src="facebook.svg" alt="Facebook" onclick="window.location.href='https://www.facebook.com/'">
+            <img src="instagram.svg" alt="Instagram" onclick="window.location.href='https://www.instagram.com/'">
+            <img src="x-twitter.svg" alt="X" onclick="window.location.href='https://twitter.com/elonmusk?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'">
+            <img src="youtube.svg" alt="Youtube" onclick="window.location.href='https://www.youtube.com/'">
+			<br><br>
+		<nav>
+			<img src="Zupy.png" alt="Link 1" onclick="window.location.href='Zupy.html'">
+            <img src="Sniadania.png" alt="Link 2" onclick="window.location.href='Sniadania.html'">
+            <img src="Salatki.png" alt="Link 3" onclick="window.location.href='Salatki.html'">
+            <img src="Desery.png" alt="Link 4" onclick="window.location.href='Desery.html'">
+        </nav>
+ <button id="back-to-top" onclick="scrollToTop()">Powrót do góry</button>			
+            <br><br><br><a href="kontakt.html">Formularz kontaktowy</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Blog Kulinarny | Autor: Hubert Michalczyk</p>
+        <div class="social-icons-footer">
+            <img src="facebook.svg" alt="Facebook" onclick="window.location.href='https://www.facebook.com/'">
+            <img src="instagram.svg" alt="Instagram" onclick="window.location.href='https://www.instagram.com/'">
+            <img src="x-twitter.svg" alt="X" onclick="window.location.href='https://twitter.com/elonmusk?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor'">
+            <img src="youtube.svg" alt="Youtube" onclick="window.location.href='https://www.youtube.com/'">
+        </div>
+    </footer>
+    <script>
+        // Funkcja do płynnego przewijania strony na górę
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Wyświetlanie lub ukrywanie przycisku w zależności od pozycji scrolla
+        window.onscroll = function () {
+            var btn = document.getElementById("back-to-top");
+
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+		
+    </script>
+</body>
+
+</html>
